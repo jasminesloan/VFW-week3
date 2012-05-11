@@ -1,0 +1,77 @@
+/* 	By:Jasmine Sloan
+	Week 2 Assignment-VFW
+	Date: 05/04/2012
+	additemstyles.css
+*/
+
+html{
+	height: 105%;
+}
+
+body{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.6, rgb(0,0,0)),
+		color-stop(1, rgb(209,30,44))
+	);
+}
+h1{
+	margin: 0px 0px 0px 40px;
+	background-position: top left;
+	background-repeat: no-repeat
+	padding-left: 40px;
+}
+
+fieldset{
+	border-right: 1px solid #666;
+	border-top-right-width:1px;
+	border-left-width: 1px;
+	margin: 0px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+legend{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 28px;
+	color: #FFF;
+	font-weight: bold;
+
+}
+label{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 20px;
+	color: #FFF;
+	display: block;
+	}
+li{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 12px;
+	color: #FFF;
+}
+ul{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 20px;
+	color: #FFF;
+}
+a{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 12px;
+	color: #FF7F24;
+	font-style: italic;
+}
+p{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 12px;
+	color: #FFF;
+}
+h2{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 12px;
+	color: #FFF;
+}
+span{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 12px;
+	color: #FFF;
+}

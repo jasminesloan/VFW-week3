@@ -1,0 +1,53 @@
+/* 	By:Jasmine Sloan
+	Week 2 Assignment-VFW
+	Date: 05/04/2012
+	indexstyles.css
+*/
+
+html {
+    height: 100%;
+}
+
+body{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.6, rgb(0,0,0)),
+		color-stop(1, rgb(209,30,44))
+	);
+}
+a{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font-size: 150%;
+	color: #FF7F24;
+	font-style: italic;
+
+}
+p{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font: 20px;
+	color: #FFF;
+	text-align: center;
+}
+h1{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font-size: 190%;
+	color: #000;
+	margin: 20px 0px 40px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+h2{
+	font-family: "Century Schoolbook", Helvetica, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	margin: 20px 0px 40px 0px;
+	text-align: center;
+}
+h3{
+	margin: 0px 20px 0px 0px;
+	background-position: top left;
+	background-repeat: no-repeat
+	padding: 20px 20px 20px 0px;
+}
