@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Delete Mixtape";
-		//deleteLink.addEventListener("click", deleteItem);
+		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
 	};
@@ -180,16 +180,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		$('groups').value = item.group[1];
 		$('email').value = item.email[1];
 		$('pword').value = item.pword[1];
-		var radios = document.forms[0].purchaseDate;
+		var radios = document.forms[0].answer;
 		for(var i=0; i < radios.length; i++){
 			if(radios[1].value == "Now" && item.purchaseDate[1] =="Now"){
 				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "Place in Que" && item.purchaseDate[1] == "Place in Que"){
+			}else if(radios[i].value == "Place in Que" && item.purchase[1] == "Place in Que"){
 				radios[i].setAttribute("checked", "checked");
 			}
 		}
-		if(item.wishListValue[i] == "Add to Wish List"){
-			$('Add to Wish List').setAttribute("checked", "checked");
+		if(item.wishList[1] == "Yes"){
+			$('yes').setAttribute("checked", "checked");
 		}
 		$('date').value = item.date[1];
 		$('quantity').value = item.quantity[1];
@@ -198,8 +198,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Remove the initial listener from the input "save contact" button.
 		save.removeEventListener("click", storeData);
 		//change submit button value to edit button
-		$('submit').value = "Edit Contact";
-		var editSubmit = $('submit');
+		$('save').value = "Edit Contact";
+		var editSubmit = $('save');
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when save the data we edited
 		editSubmit.addEventListener("click", validate);
