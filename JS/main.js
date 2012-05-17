@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			//Set the id to the existing key we're editing so that it will save our data.
 			//The key is the same that's been passed along from the editSubmit event handler
 			//to the validate function, and the passed here, into the storeData function.
-				var id = key;
+			id = key;
 		}
 		
 		//Gather up all our form field values nd store in an object.
@@ -132,16 +132,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	};
 
-	var clearLocal = function(){
-		if(localStorage.length === 0){
-			alert("There is no data to clear.");
-		}else{
-			localStorage.clear();
-			alert("All mixtapes are deleted!");
-			window.location.reload();
-			return false;
-		}
-	};
 
 	//Make Item Links
 	//Create the edit and delete links for each stored item when displayed.
@@ -195,15 +185,26 @@ window.addEventListener("DOMContentLoaded", function(){
 		$('quantity').value = item.quantity[1];
 		$('suggestions').value = item.suggestions[1];
 
-		//Remove the initial listener from the input "save contact" button.
+		//Remove the initial listener from the input "save mixtape" button.
 		save.removeEventListener("click", storeData);
-		//change submit button value to edit button
-		$('save').value = "Edit Contact";
+		//Change submit button value to edit button
+		$('save').value = "Edit Mixtape";
 		var editSubmit = $('save');
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when save the data we edited
 		editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
+	};
+
+	var clearLocal = function(){
+		if(localStorage.length === 0){
+			alert("There is no data to clear.");
+		}else{
+			localStorage.clear();
+			alert("All mixtapes are deleted!");
+			window.location.reload();
+			return false;
+		}
 	};
 
 	function deleteItem(){
@@ -233,7 +234,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var messageAry = [];
 		//Group Validation
 		if(getGroup.value=== "--Choose A Genre--"){
-			var groupError = "Please chose Genre";
+			var groupError = "Please Chose A Genre";
 			getGroup.style.border = "1px solid red";
 			messageAry.push(groupError);
 		}
@@ -264,7 +265,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		}else{
 			//If all is Ok, save our data! Send key value which came from the edit data function
-			//Remember this key value was passed through the editSubmit eventListener
+			//Remember this key value was passed through the editSubmit eventListener as a property
 			storeData(this.key);
 		}
 
