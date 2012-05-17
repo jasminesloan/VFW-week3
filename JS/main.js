@@ -95,6 +95,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Save data into Local Storage: Use stringify to convert our object
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Mixtape Saved!");
+		window.location.reload();
 	};
 	
 	//Create visiable storage
@@ -144,6 +145,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
+
 
 		//add line break
 		var breakTag = document.createElement('br');
