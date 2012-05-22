@@ -41,8 +41,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 
 	var getCheckboxValue =  function(){
-		if($('yes').checked){
-			wishListValue = $('yes').value;
+		if($('Yes').checked){
+			wishListValue = $('Yes').value;
 		}else{
 			wishListValue = "No";
 		}
@@ -95,7 +95,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Save data into Local Storage: Use stringify to convert our object
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Mixtape Saved!");
-		window.location.reload();
 	};
 	
 	//Create visiable storage
@@ -191,7 +190,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		save.removeEventListener("click", storeData);
 		//Change submit button value to edit button
 		$('save').value = "Edit Mixtape";
-		var editSubmit = $('save');
+		var editSubmit = $('submit');
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when save the data we edited
 		editSubmit.addEventListener("click", validate);
